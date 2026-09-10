@@ -1,0 +1,665 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+
+    <!-- BACKGROUND -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420"
+                    gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020B1C"/>
+      <stop offset="0.5" stop-color="#041428"/>
+      <stop offset="1" stop-color="#06243D"/>
+    </linearGradient>
+
+    <!-- CARD -->
+    <linearGradient id="card" x1="730" y1="60" x2="1130" y2="360"
+                    gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06243D"/>
+      <stop offset="1" stop-color="#073B5C"/>
+    </linearGradient>
+
+    <!-- CYAN -->
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#5DEAFF"/>
+      <stop offset="1" stop-color="#168FC4"/>
+    </linearGradient>
+
+    <!-- FEATURE -->
+    <linearGradient id="feature" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#168FC4"/>
+      <stop offset="0.5" stop-color="#5DEAFF"/>
+      <stop offset="1" stop-color="#3BE38A"/>
+    </linearGradient>
+
+    <!-- SURFACE -->
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#168FC4" stop-opacity="0.15"/>
+      <stop offset="0.5" stop-color="#5DEAFF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#3BE38A" stop-opacity="0.12"/>
+    </linearGradient>
+
+    <!-- GLOW -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+
+    <!-- GRID -->
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36"
+            stroke="#5DEAFF"
+            stroke-opacity="0.055"/>
+    </pattern>
+
+  </defs>
+
+
+  <!-- ================================================= -->
+  <!-- BACKGROUND -->
+  <!-- ================================================= -->
+
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+
+  <rect width="1200" height="420" rx="24" fill="url(#grid)">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      from="0 0"
+      to="36 36"
+      dur="8s"
+      repeatCount="indefinite"/>
+  </rect>
+
+  <ellipse cx="960" cy="210"
+           rx="260"
+           ry="175"
+           fill="#168FC4"
+           opacity="0.06"
+           filter="url(#softGlow)">
+    <animate
+      attributeName="opacity"
+      values="0.04;0.10;0.04"
+      dur="4s"
+      repeatCount="indefinite"/>
+  </ellipse>
+
+
+  <!-- ================================================= -->
+  <!-- LEFT CONTENT -->
+  <!-- ================================================= -->
+
+  <text x="70" y="82"
+        fill="#5DEAFF"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="13"
+        font-weight="700"
+        letter-spacing="3">
+    PART E
+  </text>
+
+  <text x="70" y="125"
+        fill="white"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="34"
+        font-weight="700">
+    Multiple Linear Regression
+  </text>
+
+  <text x="70" y="155"
+        fill="#8FB7C9"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="16">
+    Multiple Features → One Prediction
+  </text>
+
+  <text x="70" y="190"
+        fill="#A9C4D2"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="14">
+    Modeling a target using multiple
+  </text>
+
+  <text x="70" y="212"
+        fill="#A9C4D2"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="14">
+    independent variables simultaneously
+  </text>
+
+
+  <!-- ================================================= -->
+  <!-- MULTI-FEATURE PIPELINE -->
+  <!-- ================================================= -->
+
+  <rect x="65" y="245"
+        width="500"
+        height="95"
+        rx="14"
+        fill="#061B30"
+        stroke="#168FC4"
+        stroke-opacity="0.35"/>
+
+  <text x="85" y="270"
+        fill="#5DEAFF"
+        font-family="Arial"
+        font-size="10"
+        font-weight="700"
+        letter-spacing="2">
+    MULTI-FEATURE MODEL
+  </text>
+
+
+  <!-- FEATURE CONNECTIONS -->
+
+  <path d="M125 295 C180 295 210 310 270 310"
+        stroke="#168FC4"
+        stroke-width="2"
+        stroke-opacity="0.35"/>
+
+  <path d="M125 315 C180 315 210 310 270 310"
+        stroke="#168FC4"
+        stroke-width="2"
+        stroke-opacity="0.35"/>
+
+  <path d="M125 335 C180 335 210 315 270 310"
+        stroke="#168FC4"
+        stroke-width="2"
+        stroke-opacity="0.35"/>
+
+  <!-- Animated connection pulses -->
+
+  <circle r="4" fill="#5DEAFF" filter="url(#glow)">
+    <animateMotion
+      path="M125 295 C180 295 210 310 270 310"
+      dur="1.8s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="4" fill="#5DEAFF" filter="url(#glow)">
+    <animateMotion
+      path="M125 315 C180 315 210 310 270 310"
+      dur="1.8s"
+      begin="0.4s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <circle r="4" fill="#3BE38A" filter="url(#glow)">
+    <animateMotion
+      path="M125 335 C180 335 210 315 270 310"
+      dur="1.8s"
+      begin="0.8s"
+      repeatCount="indefinite"/>
+  </circle>
+
+
+  <!-- FEATURE NODES -->
+
+  <circle cx="110" cy="295"
+          r="7"
+          fill="#06243D"
+          stroke="#5DEAFF"
+          stroke-width="2"/>
+
+  <circle cx="110" cy="315"
+          r="7"
+          fill="#06243D"
+          stroke="#5DEAFF"
+          stroke-width="2"/>
+
+  <circle cx="110" cy="335"
+          r="7"
+          fill="#06243D"
+          stroke="#3BE38A"
+          stroke-width="2"/>
+
+  <text x="85" y="299"
+        fill="#A8C6D4"
+        font-family="Arial"
+        font-size="9">
+    X₁
+  </text>
+
+  <text x="85" y="319"
+        fill="#A8C6D4"
+        font-family="Arial"
+        font-size="9">
+    X₂
+  </text>
+
+  <text x="85" y="339"
+        fill="#A8C6D4"
+        font-family="Arial"
+        font-size="9">
+    X₃
+  </text>
+
+
+  <!-- MODEL NODE -->
+
+  <circle cx="275"
+          cy="310"
+          r="24"
+          fill="#06243D"
+          stroke="#5DEAFF"
+          stroke-width="2"
+          filter="url(#glow)">
+
+    <animate
+      attributeName="r"
+      values="22;27;22"
+      dur="2.4s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <text x="254"
+        y="307"
+        fill="#5DEAFF"
+        font-family="Arial"
+        font-size="9"
+        font-weight="700">
+    MODEL
+  </text>
+
+  <text x="258"
+        y="319"
+        fill="#8FB7C9"
+        font-family="Arial"
+        font-size="8">
+    FIT
+  </text>
+
+
+  <!-- MODEL → PREDICTION -->
+
+  <path d="M300 310 H470"
+        stroke="#168FC4"
+        stroke-width="2"
+        stroke-opacity="0.35"/>
+
+  <path d="M300 310 H470"
+        stroke="url(#feature)"
+        stroke-width="2"
+        stroke-dasharray="35 135">
+
+    <animate
+      attributeName="stroke-dashoffset"
+      from="0"
+      to="-170"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </path>
+
+
+  <!-- PREDICTION NODE -->
+
+  <circle cx="480"
+          cy="310"
+          r="10"
+          fill="#06243D"
+          stroke="#3BE38A"
+          stroke-width="2"
+          filter="url(#glow)">
+
+    <animate
+      attributeName="r"
+      values="9;13;9"
+      dur="1.8s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <text x="450"
+        y="335"
+        fill="#3BE38A"
+        font-family="Arial"
+        font-size="9"
+        font-weight="700">
+    Ŷ OUTPUT
+  </text>
+
+
+  <!-- ================================================= -->
+  <!-- LEGEND -->
+  <!-- ================================================= -->
+
+  <circle cx="82" cy="375" r="5" fill="#5DEAFF"/>
+
+  <text x="95" y="379"
+        fill="#8FAFBE"
+        font-family="Arial"
+        font-size="10">
+    FEATURES
+  </text>
+
+  <circle cx="180" cy="375" r="5" fill="#168FC4"/>
+
+  <text x="193" y="379"
+        fill="#8FAFBE"
+        font-family="Arial"
+        font-size="10">
+    COEFFICIENTS
+  </text>
+
+  <circle cx="310" cy="375" r="5" fill="#3BE38A"/>
+
+  <text x="323" y="379"
+        fill="#8FAFBE"
+        font-family="Arial"
+        font-size="10">
+    PREDICTION
+  </text>
+
+
+  <!-- ================================================= -->
+  <!-- RIGHT CARD -->
+  <!-- ================================================= -->
+
+  <rect x="625"
+        y="45"
+        width="510"
+        height="330"
+        rx="20"
+        fill="url(#card)"
+        stroke="#168FC4"
+        stroke-opacity="0.55"/>
+
+  <rect x="625"
+        y="45"
+        width="510"
+        height="330"
+        rx="20"
+        stroke="#5DEAFF"
+        stroke-opacity="0.15"
+        stroke-width="2">
+
+    <animate
+      attributeName="stroke-opacity"
+      values="0.08;0.28;0.08"
+      dur="3s"
+      repeatCount="indefinite"/>
+  </rect>
+
+
+  <!-- CARD HEADER -->
+
+  <text x="655"
+        y="78"
+        fill="#5DEAFF"
+        font-family="Arial"
+        font-size="11"
+        font-weight="700"
+        letter-spacing="2">
+    MULTIPLE REGRESSION
+  </text>
+
+  <text x="655"
+        y="101"
+        fill="white"
+        font-family="Arial"
+        font-size="15"
+        font-weight="600">
+    Feature Contribution Monitor
+  </text>
+
+
+  <!-- ================================================= -->
+  <!-- REGRESSION SURFACE -->
+  <!-- ================================================= -->
+
+  <!-- Surface -->
+
+  <path d="M660 285
+           L770 235
+           L885 255
+           L1015 205
+           L1085 235
+           L975 305
+           L850 290
+           L730 325 Z"
+        fill="url(#surface)"
+        stroke="#168FC4"
+        stroke-opacity="0.35"/>
+
+
+  <!-- Surface horizontal lines -->
+
+  <path d="M680 285 L785 240 L900 260 L1035 215"
+        stroke="#5DEAFF"
+        stroke-opacity="0.35"
+        stroke-width="1"/>
+
+  <path d="M700 300 L805 255 L920 275 L1050 230"
+        stroke="#5DEAFF"
+        stroke-opacity="0.25"
+        stroke-width="1"/>
+
+  <path d="M725 315 L830 270 L945 290 L1070 245"
+        stroke="#5DEAFF"
+        stroke-opacity="0.2"
+        stroke-width="1"/>
+
+
+  <!-- Surface vertical lines -->
+
+  <path d="M770 235 L730 325"
+        stroke="#5DEAFF"
+        stroke-opacity="0.25"/>
+
+  <path d="M885 255 L850 290"
+        stroke="#5DEAFF"
+        stroke-opacity="0.25"/>
+
+  <path d="M1015 205 L975 305"
+        stroke="#5DEAFF"
+        stroke-opacity="0.25"/>
+
+
+  <!-- ================================================= -->
+  <!-- FEATURE AXES -->
+  <!-- ================================================= -->
+
+  <path d="M680 320 L850 350 L1080 275"
+        stroke="#8FB7C9"
+        stroke-opacity="0.35"
+        stroke-width="1"/>
+
+  <path d="M680 320 L680 170"
+        stroke="#8FB7C9"
+        stroke-opacity="0.35"
+        stroke-width="1"/>
+
+  <text x="700"
+        y="344"
+        fill="#8FB7C9"
+        font-family="Arial"
+        font-size="9">
+    X₁
+  </text>
+
+  <text x="1045"
+        y="294"
+        fill="#8FB7C9"
+        font-family="Arial"
+        font-size="9">
+    X₂
+  </text>
+
+  <text x="663"
+        y="165"
+        fill="#8FB7C9"
+        font-family="Arial"
+        font-size="9">
+    Y
+  </text>
+
+
+  <!-- ================================================= -->
+  <!-- DATA POINTS -->
+  <!-- ================================================= -->
+
+  <circle cx="750" cy="280" r="4"
+          fill="#5DEAFF"
+          filter="url(#glow)">
+    <animate attributeName="opacity"
+             values="0.25;1;0.25"
+             dur="2s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="820" cy="260" r="4"
+          fill="#5DEAFF"
+          filter="url(#glow)">
+    <animate attributeName="opacity"
+             values="0.25;1;0.25"
+             dur="2s"
+             begin="0.3s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="900" cy="275" r="4"
+          fill="#5DEAFF"
+          filter="url(#glow)">
+    <animate attributeName="opacity"
+             values="0.25;1;0.25"
+             dur="2s"
+             begin="0.6s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="970" cy="245" r="4"
+          fill="#3BE38A"
+          filter="url(#glow)">
+    <animate attributeName="opacity"
+             values="0.25;1;0.25"
+             dur="2s"
+             begin="0.9s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="1030" cy="230" r="4"
+          fill="#3BE38A"
+          filter="url(#glow)">
+    <animate attributeName="opacity"
+             values="0.25;1;0.25"
+             dur="2s"
+             begin="1.2s"
+             repeatCount="indefinite"/>
+  </circle>
+
+
+  <!-- ================================================= -->
+  <!-- EQUATION -->
+  <!-- ================================================= -->
+
+  <rect x="655"
+        y="115"
+        width="250"
+        height="38"
+        rx="9"
+        fill="#04182A"
+        stroke="#168FC4"
+        stroke-opacity="0.35"/>
+
+  <text x="672"
+        y="139"
+        fill="#5DEAFF"
+        font-family="Arial"
+        font-size="13"
+        font-weight="700">
+    ŷ = b₀ + b₁X₁ + b₂X₂ + b₃X₃
+  </text>
+
+
+  <!-- ================================================= -->
+  <!-- COEFFICIENT PANEL -->
+  <!-- ================================================= -->
+
+  <rect x="925"
+        y="115"
+        width="175"
+        height="80"
+        rx="10"
+        fill="#04182A"
+        stroke="#168FC4"
+        stroke-opacity="0.3"/>
+
+  <text x="940"
+        y="135"
+        fill="#8FAFBE"
+        font-family="Arial"
+        font-size="9"
+        font-weight="700">
+    COEFFICIENTS
+  </text>
+
+  <text x="940"
+        y="153"
+        fill="#5DEAFF"
+        font-family="Arial"
+        font-size="10">
+    b₁ = +0.62
+  </text>
+
+  <text x="1010"
+        y="153"
+        fill="#5DEAFF"
+        font-family="Arial"
+        font-size="10">
+    b₂ = +0.31
+  </text>
+
+  <text x="940"
+        y="174"
+        fill="#3BE38A"
+        font-family="Arial"
+        font-size="10">
+    b₃ = −0.18
+  </text>
+
+  <text x="1010"
+        y="174"
+        fill="#8FB7C9"
+        font-family="Arial"
+        font-size="9">
+    FITTED
+  </text>
+
+
+  <!-- ================================================= -->
+  <!-- MOVING SCAN -->
+  <!-- ================================================= -->
+
+  <rect x="650"
+        y="55"
+        width="2"
+        height="305"
+        fill="#5DEAFF"
+        opacity="0.10">
+
+    <animate
+      attributeName="x"
+      values="650;1125;650"
+      dur="6s"
+      repeatCount="indefinite"/>
+  </rect>
+
+
+  <!-- ================================================= -->
+  <!-- FRAME -->
+  <!-- ================================================= -->
+
+  <rect x="1"
+        y="1"
+        width="1198"
+        height="418"
+        rx="23"
+        stroke="#168FC4"
+        stroke-opacity="0.35"/>
+
+</svg>
