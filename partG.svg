@@ -24,20 +24,13 @@
       <stop offset="1" stop-color="#168FC4"/>
     </linearGradient>
 
-    <!-- POLYNOMIAL -->
-    <linearGradient id="poly" x1="0" y1="0" x2="1" y2="0">
+    <!-- OPTIMIZATION -->
+    <linearGradient id="optimize" x1="0" y1="0" x2="1" y2="0">
       <stop stop-color="#168FC4"/>
       <stop offset="0.45" stop-color="#5DEAFF"/>
       <stop offset="0.75" stop-color="#3BE38A"/>
       <stop offset="1" stop-color="#5DEAFF"/>
     </linearGradient>
-
-    <!-- GRID -->
-    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
-      <path d="M36 0H0V36"
-            stroke="#5DEAFF"
-            stroke-opacity="0.055"/>
-    </pattern>
 
     <!-- GLOW -->
     <filter id="glow">
@@ -51,6 +44,14 @@
     <filter id="softGlow">
       <feGaussianBlur stdDeviation="10"/>
     </filter>
+
+    <!-- GRID -->
+    <pattern id="grid" width="36" height="36"
+             patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36"
+            stroke="#5DEAFF"
+            stroke-opacity="0.055"/>
+    </pattern>
 
   </defs>
 
@@ -71,7 +72,7 @@
       repeatCount="indefinite"/>
   </rect>
 
-  <ellipse cx="960" cy="210"
+  <ellipse cx="965" cy="210"
            rx="260"
            ry="175"
            fill="#168FC4"
@@ -95,7 +96,7 @@
         font-size="13"
         font-weight="700"
         letter-spacing="3">
-    PART F
+    PART G
   </text>
 
   <text x="70" y="125"
@@ -103,33 +104,33 @@
         font-family="Arial, Helvetica, sans-serif"
         font-size="34"
         font-weight="700">
-    Polynomial Regression
+    Gradient Descent Optimization
   </text>
 
   <text x="70" y="155"
         fill="#8FB7C9"
         font-family="Arial, Helvetica, sans-serif"
         font-size="16">
-    Modeling Non-Linear Relationships
+    Finding the Minimum Loss
   </text>
 
   <text x="70" y="190"
         fill="#A9C4D2"
         font-family="Arial, Helvetica, sans-serif"
         font-size="14">
-    Capturing curved relationships by
+    Iteratively adjusting model parameters
   </text>
 
   <text x="70" y="212"
         fill="#A9C4D2"
         font-family="Arial, Helvetica, sans-serif"
         font-size="14">
-    transforming features into polynomial terms
+    to minimize the cost function
   </text>
 
 
   <!-- ================================================= -->
-  <!-- POLYNOMIAL PIPELINE -->
+  <!-- OPTIMIZATION PIPELINE -->
   <!-- ================================================= -->
 
   <rect x="65" y="245"
@@ -146,19 +147,19 @@
         font-size="10"
         font-weight="700"
         letter-spacing="2">
-    POLYNOMIAL PIPELINE
+    OPTIMIZATION LOOP
   </text>
 
 
-  <!-- PIPELINE LINE -->
+  <!-- MAIN PIPELINE -->
 
-  <path d="M105 304 H520"
+  <path d="M110 304 H520"
         stroke="#168FC4"
         stroke-opacity="0.25"
         stroke-width="2"/>
 
-  <path d="M105 304 H520"
-        stroke="url(#poly)"
+  <path d="M110 304 H520"
+        stroke="url(#optimize)"
         stroke-width="2"
         stroke-dasharray="45 370"
         stroke-linecap="round">
@@ -223,7 +224,7 @@
 
     <animate
       attributeName="r"
-      values="7;10;7"
+      values="7;11;7"
       dur="2s"
       begin="1.2s"
       repeatCount="indefinite"/>
@@ -232,33 +233,33 @@
 
   <!-- LABELS -->
 
-  <text x="90" y="326"
+  <text x="87" y="326"
         fill="#9BBAC8"
         font-family="Arial"
         font-size="10">
-    INPUT X
+    START
   </text>
 
   <text x="220" y="326"
         fill="#9BBAC8"
         font-family="Arial"
         font-size="10">
-    X² TERMS
+    GRADIENT
   </text>
 
-  <text x="355" y="326"
+  <text x="354" y="326"
         fill="#9BBAC8"
         font-family="Arial"
         font-size="10">
-    FIT CURVE
+    UPDATE
   </text>
 
-  <text x="487" y="326"
+  <text x="486" y="326"
         fill="#3BE38A"
         font-family="Arial"
         font-size="10"
         font-weight="700">
-    PREDICT
+    CONVERGE
   </text>
 
 
@@ -272,25 +273,25 @@
         fill="#8FAFBE"
         font-family="Arial"
         font-size="10">
-    OBSERVED DATA
+    PARAMETER UPDATE
   </text>
 
-  <circle cx="210" cy="375" r="5" fill="#3BE38A"/>
+  <circle cx="225" cy="375" r="5" fill="#168FC4"/>
 
-  <text x="223" y="379"
+  <text x="238" y="379"
         fill="#8FAFBE"
         font-family="Arial"
         font-size="10">
-    POLYNOMIAL FIT
+    LOSS
   </text>
 
-  <circle cx="350" cy="375" r="5" fill="#168FC4"/>
+  <circle cx="300" cy="375" r="5" fill="#3BE38A"/>
 
-  <text x="363" y="379"
+  <text x="313" y="379"
         fill="#8FAFBE"
         font-family="Arial"
         font-size="10">
-    PREDICTION
+    MINIMUM
   </text>
 
 
@@ -335,7 +336,7 @@
         font-size="11"
         font-weight="700"
         letter-spacing="2">
-    POLYNOMIAL MODEL
+    GRADIENT DESCENT
   </text>
 
   <text x="655"
@@ -344,7 +345,7 @@
         font-family="Arial"
         font-size="15"
         font-weight="600">
-    Non-Linear Fit Monitor
+    Loss Optimization Monitor
   </text>
 
 
@@ -367,11 +368,11 @@
         font-family="Arial"
         font-size="13"
         font-weight="700">
-    ŷ = b₀ + b₁x + b₂x² + b₃x³
+    θ = θ − α · ∇J(θ)
   </text>
 
 
-  <!-- DEGREE -->
+  <!-- LEARNING RATE -->
 
   <rect x="975"
         y="115"
@@ -382,27 +383,27 @@
         stroke="#3BE38A"
         stroke-opacity="0.35"/>
 
-  <text x="990"
-        y="139"
+  <text x="988"
+        y="130"
         fill="#8FAFBE"
         font-family="Arial"
-        font-size="9"
+        font-size="8"
         font-weight="700">
-    DEGREE
+    LEARNING RATE
   </text>
 
-  <text x="1055"
-        y="139"
+  <text x="1035"
+        y="144"
         fill="#3BE38A"
         font-family="Arial"
-        font-size="13"
+        font-size="11"
         font-weight="700">
-    3
+    α = 0.01
   </text>
 
 
   <!-- ================================================= -->
-  <!-- GRAPH AREA -->
+  <!-- LOSS CURVE GRAPH -->
   <!-- ================================================= -->
 
   <rect x="655"
@@ -448,168 +449,122 @@
 
 
   <!-- ================================================= -->
-  <!-- POLYNOMIAL CURVE -->
+  <!-- LOSS CURVE -->
   <!-- ================================================= -->
 
-  <path d="M690 295
-           C730 285 750 255 785 230
-           C820 205 850 210 880 235
-           C915 265 945 285 975 265
-           C1010 240 1035 205 1065 195"
+  <path d="M695 205
+           C730 208 755 225 785 255
+           C815 286 845 313 885 318
+           C925 323 955 306 980 275
+           C1015 232 1040 205 1065 190"
         fill="none"
         stroke="#168FC4"
-        stroke-width="8"
-        stroke-opacity="0.12"
+        stroke-opacity="0.13"
+        stroke-width="9"
         filter="url(#softGlow)"/>
 
-  <path d="M690 295
-           C730 285 750 255 785 230
-           C820 205 850 210 880 235
-           C915 265 945 285 975 265
-           C1010 240 1035 205 1065 195"
+  <path d="M695 205
+           C730 208 755 225 785 255
+           C815 286 845 313 885 318
+           C925 323 955 306 980 275
+           C1015 232 1040 205 1065 190"
         fill="none"
-        stroke="url(#poly)"
+        stroke="url(#optimize)"
         stroke-width="3"
-        stroke-linecap="round"
-        stroke-dasharray="520"
-        stroke-dashoffset="520">
-
-    <animate
-      attributeName="stroke-dashoffset"
-      values="520;0;0;520"
-      dur="6s"
-      repeatCount="indefinite"/>
-  </path>
+        stroke-linecap="round"/>
 
 
   <!-- ================================================= -->
-  <!-- OBSERVED DATA -->
+  <!-- DESCENT STEPS -->
   <!-- ================================================= -->
 
-  <circle cx="720" cy="280" r="4"
-          fill="#5DEAFF"
-          filter="url(#glow)">
-    <animate
-      attributeName="opacity"
-      values="0.2;1;0.2"
-      dur="2s"
-      repeatCount="indefinite"/>
-  </circle>
+  <!-- Step 1 -->
 
-  <circle cx="760" cy="250" r="4"
-          fill="#5DEAFF"
-          filter="url(#glow)">
-    <animate
-      attributeName="opacity"
-      values="0.2;1;0.2"
-      dur="2s"
-      begin="0.25s"
-      repeatCount="indefinite"/>
-  </circle>
-
-  <circle cx="810" cy="220" r="4"
-          fill="#5DEAFF"
-          filter="url(#glow)">
-    <animate
-      attributeName="opacity"
-      values="0.2;1;0.2"
-      dur="2s"
-      begin="0.5s"
-      repeatCount="indefinite"/>
-  </circle>
-
-  <circle cx="855" cy="215" r="4"
-          fill="#5DEAFF"
-          filter="url(#glow)">
-    <animate
-      attributeName="opacity"
-      values="0.2;1;0.2"
-      dur="2s"
-      begin="0.75s"
-      repeatCount="indefinite"/>
-  </circle>
-
-  <circle cx="900" cy="250" r="4"
-          fill="#5DEAFF"
-          filter="url(#glow)">
-    <animate
-      attributeName="opacity"
-      values="0.2;1;0.2"
-      dur="2s"
-      begin="1s"
-      repeatCount="indefinite"/>
-  </circle>
-
-  <circle cx="950" cy="275" r="4"
-          fill="#5DEAFF"
-          filter="url(#glow)">
-    <animate
-      attributeName="opacity"
-      values="0.2;1;0.2"
-      dur="2s"
-      begin="1.25s"
-      repeatCount="indefinite"/>
-  </circle>
-
-  <circle cx="1000" cy="245" r="4"
-          fill="#3BE38A"
-          filter="url(#glow)">
-    <animate
-      attributeName="opacity"
-      values="0.2;1;0.2"
-      dur="2s"
-      begin="1.5s"
-      repeatCount="indefinite"/>
-  </circle>
-
-  <circle cx="1040" cy="215" r="4"
-          fill="#3BE38A"
-          filter="url(#glow)">
-    <animate
-      attributeName="opacity"
-      values="0.2;1;0.2"
-      dur="2s"
-      begin="1.75s"
-      repeatCount="indefinite"/>
-  </circle>
-
-
-  <!-- ================================================= -->
-  <!-- RESIDUAL LINES -->
-  <!-- ================================================= -->
-
-  <path d="M760 250 L760 242"
-        stroke="#3BE38A"
-        stroke-width="1"
-        stroke-dasharray="3 3"
+  <path d="M720 212 L770 245"
+        stroke="#5DEAFF"
+        stroke-width="2"
+        stroke-dasharray="5 4"
         opacity="0.7"/>
 
-  <path d="M810 220 L810 228"
-        stroke="#3BE38A"
-        stroke-width="1"
-        stroke-dasharray="3 3"
+  <!-- Step 2 -->
+
+  <path d="M770 245 L815 285"
+        stroke="#5DEAFF"
+        stroke-width="2"
+        stroke-dasharray="5 4"
         opacity="0.7"/>
 
-  <path d="M900 250 L900 242"
-        stroke="#3BE38A"
-        stroke-width="1"
-        stroke-dasharray="3 3"
+  <!-- Step 3 -->
+
+  <path d="M815 285 L855 312"
+        stroke="#5DEAFF"
+        stroke-width="2"
+        stroke-dasharray="5 4"
         opacity="0.7"/>
 
-  <path d="M950 275 L950 268"
+  <!-- Step 4 -->
+
+  <path d="M855 312 L885 318"
         stroke="#3BE38A"
-        stroke-width="1"
-        stroke-dasharray="3 3"
-        opacity="0.7"/>
+        stroke-width="2"
+        stroke-dasharray="5 4"
+        opacity="0.8"/>
 
 
   <!-- ================================================= -->
-  <!-- PREDICTION POINT -->
+  <!-- ANIMATED DESCENT POINT -->
   <!-- ================================================= -->
 
-  <circle cx="1000"
-          cy="245"
-          r="9"
+  <circle cx="720"
+          cy="212"
+          r="7"
+          fill="#06243D"
+          stroke="#5DEAFF"
+          stroke-width="2"
+          filter="url(#glow)">
+
+    <animateMotion
+      path="M0 0
+            C50 33 95 73 135 100
+            C175 127 215 105 260 63
+            C300 25 325 5 345 -22"
+      dur="5s"
+      repeatCount="indefinite"/>
+  </circle>
+
+
+  <!-- Moving glow -->
+
+  <circle cx="720"
+          cy="212"
+          r="14"
+          fill="none"
+          stroke="#5DEAFF"
+          stroke-opacity="0.35">
+
+    <animateMotion
+      path="M0 0
+            C50 33 95 73 135 100
+            C175 127 215 105 260 63
+            C300 25 325 5 345 -22"
+      dur="5s"
+      repeatCount="indefinite"/>
+
+    <animate
+      attributeName="r"
+      values="8;18;8"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+  </circle>
+
+
+  <!-- ================================================= -->
+  <!-- MINIMUM POINT -->
+  <!-- ================================================= -->
+
+  <circle cx="885"
+          cy="318"
+          r="12"
           fill="none"
           stroke="#3BE38A"
           stroke-width="2"
@@ -617,7 +572,7 @@
 
     <animate
       attributeName="r"
-      values="7;16;7"
+      values="8;20;8"
       dur="2s"
       repeatCount="indefinite"/>
 
@@ -628,36 +583,55 @@
       repeatCount="indefinite"/>
   </circle>
 
-  <circle cx="1000"
-          cy="245"
+  <circle cx="885"
+          cy="318"
           r="5"
           fill="#3BE38A"
           filter="url(#glow)"/>
 
-
-  <!-- ================================================= -->
-  <!-- AXIS LABELS -->
-  <!-- ================================================= -->
-
-  <text x="1050"
-        y="340"
-        fill="#8FB7C9"
+  <text x="898"
+        y="315"
+        fill="#3BE38A"
         font-family="Arial"
-        font-size="9">
-    X
-  </text>
-
-  <text x="670"
-        y="190"
-        fill="#8FB7C9"
-        font-family="Arial"
-        font-size="9">
-    Y
+        font-size="9"
+        font-weight="700">
+    MINIMUM
   </text>
 
 
   <!-- ================================================= -->
-  <!-- MODEL STATUS -->
+  <!-- ITERATION COUNTER -->
+  <!-- ================================================= -->
+
+  <rect x="930"
+        y="285"
+        width="140"
+        height="30"
+        rx="8"
+        fill="#061B30"
+        stroke="#168FC4"
+        stroke-opacity="0.3"/>
+
+  <text x="945"
+        y="304"
+        fill="#8FAFBE"
+        font-family="Arial"
+        font-size="9">
+    ITERATION
+  </text>
+
+  <text x="1010"
+        y="304"
+        fill="#5DEAFF"
+        font-family="Arial"
+        font-size="11"
+        font-weight="700">
+    247
+  </text>
+
+
+  <!-- ================================================= -->
+  <!-- LOSS STATUS -->
   <!-- ================================================= -->
 
   <rect x="655"
@@ -686,15 +660,15 @@
         font-family="Arial"
         font-size="9"
         font-weight="700">
-    CURVE FIT ACTIVE
+    LOSS DECREASING
   </text>
 
-  <text x="1000"
+  <text x="1005"
         y="356"
         fill="#8FB7C9"
         font-family="Arial"
         font-size="9">
-    NON-LINEAR
+    CONVERGING
   </text>
 
 
