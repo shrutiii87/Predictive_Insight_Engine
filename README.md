@@ -1,3 +1,7 @@
+<img width="1200" height="420" alt="predictive-insight-engine-header-animated" src="https://github.com/user-attachments/assets/d7ac7691-d839-41a1-bde5-2f7d4f7d96d1" />
+
+---
+
 ## 🎯 Objective
 
 The purpose of this project is to demonstrate **complete, practical knowledge of Supervised Learning regression techniques** — walking the full path from raw housing data to a compared, diagnosed and business-ready predictive model.
