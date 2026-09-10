@@ -82,6 +82,8 @@ The dataset contains:
 
 ---
 
+<img width="1200" height="420" alt="partb" src="https://github.com/user-attachments/assets/ce454308-3e85-4d11-b748-1043655ae055" />
+
 ## 🧠 Part B : Dataset Understanding & Preparation
 
 ### 7️⃣ Identify independent and dependent variables
@@ -121,6 +123,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 💡 **Insight:** The 80/20 split gives 3,360 training and 840 testing rows — enough data on both sides for reliable evaluation. 🔀
 
 ---
+
+<img width="1200" height="420" alt="partC" src="https://github.com/user-attachments/assets/635779b6-71a9-4362-960e-ba5712cf0dd2" />
 
 ## 📊 Part C : Simple Linear Regression
 
@@ -162,6 +166,8 @@ plt.axhline(y=0, linestyle='--', color="red")
 
 ---
 
+<img width="1200" height="420" alt="partD" src="https://github.com/user-attachments/assets/4eebf419-bfb4-4188-a545-912c4c7d329d" />
+
 ## 📈 Part D : Model Evaluation Metrics
 
 ### 1️⃣3️⃣ Evaluate Simple Linear Regression
@@ -187,6 +193,8 @@ r2   = r2_score(y_test_slr, y_pred_slr)
 - **R² Score** — how much price variation is explained by the feature(s) used.
 
 ---
+
+<img width="1200" height="420" alt="partE" src="https://github.com/user-attachments/assets/572664aa-80b6-4141-80f2-5e49688032b8" />
 
 ## 📉 Part E : Multiple Linear Regression
 
@@ -224,6 +232,8 @@ mlr_model.fit(X_train_mlr, y_train_mlr)
 
 ---
 
+<img width="1200" height="420" alt="partF" src="https://github.com/user-attachments/assets/c3475261-7f6b-4c72-bb0d-5f5cc5284643" />
+
 ## 🔁 Part F : Polynomial Regression
 
 ### 1️⃣8️⃣ Implement Polynomial Regression (Degree 2)
@@ -259,6 +269,8 @@ X_train_poly = poly_features.fit_transform(X_train_poly)
 💡 **Insight:** Train R² (0.572) ≈ Test R² (0.563), gap < 0.01 — no overfitting, but both being low signals slight underfitting (high bias). ⚖️
 
 ---
+
+<img width="1200" height="420" alt="partG" src="https://github.com/user-attachments/assets/4d3ede3a-6903-488a-a924-698ec0c5f388" />
 
 ## ⚙️ Part G : Gradient Descent Optimization
 
@@ -304,6 +316,8 @@ epochs_compare = 100  # fair, equal-time comparison
 
 ---
 
+<img width="1200" height="420" alt="partH" src="https://github.com/user-attachments/assets/3abee52b-4390-4780-a9f9-ed1e10ed0659" />
+
 ## 🔍 Part H : Bias–Variance & Model Diagnostics
 
 ### 2️⃣6️⃣ Analyze bias and variance across all three models
@@ -339,6 +353,8 @@ A model that is **too simple** (one feature) has high bias — both training and
 💡 **Insight:** Multiple Linear Regression has both the best validation performance and the smallest train–CV gap — the most consistent, best-generalizing model in this project. 🥇
 
 ---
+
+<img width="1200" height="420" alt="partI" src="https://github.com/user-attachments/assets/327f69f3-3396-4e74-94a6-03bc9736fa15" />
 
 ## 📊 Part I : Final Analysis & Reporting
 
