@@ -1,0 +1,367 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#040d1c"/>
+    <stop offset="50%" stop-color="#081a30"/>
+    <stop offset="100%" stop-color="#03101e"/>
+  </linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#20d9ef"/>
+    <stop offset="100%" stop-color="#38e0a8"/>
+  </linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#0b2945"/>
+    <stop offset="100%" stop-color="#061528"/>
+  </linearGradient>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feMerge>
+      <feMergeNode in="b"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="#16415b" stroke-width="1" opacity=".42"/>
+  </pattern>
+</defs>
+
+<rect width="1400" height="900" rx="34" fill="url(#bg)"/>
+<rect width="1400" height="900" rx="34" fill="url(#grid)">
+  <animateTransform attributeName="transform" type="translate"
+    from="0 0" to="40 40" dur="7s" repeatCount="indefinite"/>
+</rect>
+<rect x="2" y="2" width="1396" height="896" rx="33"
+      fill="none" stroke="#1c506c" stroke-width="2"/>
+
+<path d="M30 30H100 M30 30V100" stroke="#25d9ef" stroke-width="3"/>
+<path d="M1370 870H1300 M1370 870V800" stroke="#34d399" stroke-width="3"/>
+
+<text x="65" y="70" font-family="Arial" font-size="13"
+      font-weight="700" letter-spacing="4" fill="#5ee9f7">
+  MACHINE LEARNING • PROJECT ROADMAP
+</text>
+
+<text x="65" y="125" font-family="Arial" font-size="44"
+      font-weight="700" fill="#f1fbff">
+  Predictive Insights Engine
+</text>
+
+<text x="65" y="160" font-family="Arial" font-size="16" fill="#88aabd">
+  Complete journey from project objective and data preparation to modeling,
+  optimization, diagnostics and final reporting
+</text>
+
+<line x1="65" y1="195" x2="1335" y2="195"
+      stroke="#1a4058" stroke-width="2"/>
+
+<text x="65" y="235" font-family="Arial" font-size="12"
+      font-weight="700" letter-spacing="3" fill="#5ee9f7">
+  PROJECT SEQUENCE
+</text>
+
+<!-- PART A -->
+<g>
+  <rect x="65" y="265" width="390" height="190" rx="22"
+        fill="url(#panel)" stroke="#1c536e" stroke-width="2"/>
+  <rect x="65" y="265" width="390" height="6" rx="3" fill="url(#accent)">
+    <animate attributeName="opacity" values=".5;1;.5"
+      dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="92" y="310" font-family="Arial" font-size="12"
+        font-weight="700" letter-spacing="2" fill="#5ee9f7">PART A</text>
+  <text x="92" y="345" font-family="Arial" font-size="24"
+        font-weight="700" fill="#effaff">Project Introduction</text>
+  <text x="92" y="376" font-family="Arial" font-size="18"
+        fill="#9cb5c4">&amp; Objective</text>
+  <line x1="92" y1="398" x2="425" y2="398" stroke="#204961"/>
+  <text x="92" y="425" font-family="Arial" font-size="12"
+        fill="#7195a8">DEFINE • PLAN • OBJECTIVE</text>
+  <text x="92" y="445" font-family="Arial" font-size="11"
+        fill="#55788d">Establish the regression problem and goals</text>
+</g>
+
+<!-- PART B -->
+<g>
+  <rect x="505" y="265" width="390" height="190" rx="22"
+        fill="url(#panel)" stroke="#1c536e" stroke-width="2"/>
+  <rect x="505" y="265" width="390" height="6" rx="3" fill="url(#accent)"/>
+  <text x="532" y="310" font-family="Arial" font-size="12"
+        font-weight="700" letter-spacing="2" fill="#5ee9f7">PART B</text>
+  <text x="532" y="345" font-family="Arial" font-size="24"
+        font-weight="700" fill="#effaff">Dataset Understanding</text>
+  <text x="532" y="376" font-family="Arial" font-size="18"
+        fill="#9cb5c4">&amp; Preparation</text>
+  <line x1="532" y1="398" x2="865" y2="398" stroke="#204961"/>
+
+  <g>
+    <rect x="532" y="414" width="42" height="20" rx="3" fill="#17445c"/>
+    <rect x="580" y="414" width="42" height="20" rx="3" fill="#205b6c"/>
+    <rect x="628" y="414" width="42" height="20" rx="3" fill="#287581"/>
+    <rect x="676" y="414" width="42" height="20" rx="3" fill="#2d8d91"/>
+    <rect x="724" y="414" width="42" height="20" rx="3" fill="#34d399"/>
+    <rect x="772" y="414" width="42" height="20" rx="3" fill="#287581"/>
+    <rect x="820" y="414" width="45" height="20" rx="3" fill="#17445c">
+      <animate attributeName="opacity" values=".4;1;.4"
+        dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <text x="532" y="449" font-family="Arial" font-size="11"
+        fill="#55788d">CLEAN • IMPUTE • PREPARE</text>
+</g>
+
+<!-- PART C -->
+<g>
+  <rect x="945" y="265" width="390" height="190" rx="22"
+        fill="url(#panel)" stroke="#1c536e" stroke-width="2"/>
+  <rect x="945" y="265" width="390" height="6" rx="3" fill="url(#accent)"/>
+  <text x="972" y="310" font-family="Arial" font-size="12"
+        font-weight="700" letter-spacing="2" fill="#5ee9f7">PART C</text>
+  <text x="972" y="345" font-family="Arial" font-size="24"
+        font-weight="700" fill="#effaff">Simple Linear Regression</text>
+  <text x="972" y="376" font-family="Arial" font-size="15"
+        fill="#9cb5c4">Relationship → Fit → Prediction</text>
+
+  <line x1="972" y1="432" x2="1290" y2="395"
+        stroke="#34d399" stroke-width="3"/>
+
+  <circle cx="1005" cy="423" r="5" fill="#5ee9f7"/>
+  <circle cx="1060" cy="416" r="5" fill="#5ee9f7"/>
+  <circle cx="1120" cy="408" r="5" fill="#5ee9f7"/>
+  <circle cx="1190" cy="405" r="5" fill="#5ee9f7"/>
+  <circle cx="1260" cy="397" r="5" fill="#5ee9f7"/>
+
+  <text x="972" y="449" font-family="Arial" font-size="11"
+        fill="#55788d">ŷ = b₀ + b₁x</text>
+</g>
+
+<!-- PART D -->
+<g>
+  <rect x="65" y="500" width="390" height="190" rx="22"
+        fill="url(#panel)" stroke="#1c536e" stroke-width="2"/>
+  <rect x="65" y="500" width="390" height="6" rx="3" fill="url(#accent)"/>
+  <text x="92" y="545" font-family="Arial" font-size="12"
+        font-weight="700" letter-spacing="2" fill="#5ee9f7">PART D</text>
+  <text x="92" y="580" font-family="Arial" font-size="24"
+        font-weight="700" fill="#effaff">Model Evaluation Metrics</text>
+  <text x="92" y="610" font-family="Arial" font-size="15"
+        fill="#9cb5c4">Measure • Compare • Score</text>
+
+  <g font-family="Arial">
+    <text x="92" y="640" font-size="11" fill="#7898aa">R²</text>
+    <rect x="125" y="632" width="285" height="7" rx="3" fill="#12384f"/>
+    <rect x="125" y="632" width="0" height="7" rx="3" fill="url(#accent)">
+      <animate attributeName="width" values="0;260;260;0"
+        dur="4s" repeatCount="indefinite"/>
+    </rect>
+
+    <text x="92" y="661" font-size="11" fill="#7898aa">MAE</text>
+    <rect x="125" y="653" width="285" height="7" rx="3" fill="#12384f"/>
+    <rect x="125" y="653" width="0" height="7" rx="3" fill="url(#accent)">
+      <animate attributeName="width" values="0;220;220;0"
+        dur="4s" begin=".3s" repeatCount="indefinite"/>
+    </rect>
+
+    <text x="92" y="682" font-size="11" fill="#7898aa">RMSE</text>
+    <rect x="125" y="674" width="285" height="7" rx="3" fill="#12384f"/>
+    <rect x="125" y="674" width="0" height="7" rx="3" fill="url(#accent)">
+      <animate attributeName="width" values="0;240;240;0"
+        dur="4s" begin=".6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</g>
+
+<!-- PART E -->
+<g>
+  <rect x="505" y="500" width="390" height="190" rx="22"
+        fill="url(#panel)" stroke="#1c536e" stroke-width="2"/>
+  <rect x="505" y="500" width="390" height="6" rx="3" fill="url(#accent)"/>
+  <text x="532" y="545" font-family="Arial" font-size="12"
+        font-weight="700" letter-spacing="2" fill="#5ee9f7">PART E</text>
+  <text x="532" y="580" font-family="Arial" font-size="24"
+        font-weight="700" fill="#effaff">Multiple Linear Regression</text>
+  <text x="532" y="610" font-family="Arial" font-size="15"
+        fill="#9cb5c4">Multiple Features → One Prediction</text>
+
+  <g>
+    <text x="532" y="642" font-family="Arial" font-size="11" fill="#7898aa">X₁</text>
+    <rect x="560" y="634" width="270" height="8" rx="4" fill="#12384f"/>
+    <rect x="560" y="634" width="0" height="8" rx="4" fill="#22d3ee">
+      <animate attributeName="width" values="0;210;210;0"
+        dur="3.5s" repeatCount="indefinite"/>
+    </rect>
+
+    <text x="532" y="665" font-family="Arial" font-size="11" fill="#7898aa">X₂</text>
+    <rect x="560" y="657" width="270" height="8" rx="4" fill="#12384f"/>
+    <rect x="560" y="657" width="0" height="8" rx="4" fill="#34d399">
+      <animate attributeName="width" values="0;155;155;0"
+        dur="3.5s" begin=".4s" repeatCount="indefinite"/>
+    </rect>
+
+    <text x="532" y="688" font-family="Arial" font-size="11" fill="#7898aa">X₃</text>
+    <rect x="560" y="680" width="270" height="8" rx="4" fill="#12384f"/>
+    <rect x="560" y="680" width="0" height="8" rx="4" fill="#22d3ee">
+      <animate attributeName="width" values="0;105;105;0"
+        dur="3.5s" begin=".8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</g>
+
+<!-- PART F WITH SMALL GRAPH -->
+<g>
+  <rect x="945" y="500" width="390" height="190" rx="22"
+        fill="url(#panel)" stroke="#1c536e" stroke-width="2"/>
+  <rect x="945" y="500" width="390" height="6" rx="3" fill="url(#accent)"/>
+
+  <text x="972" y="545" font-family="Arial" font-size="12"
+        font-weight="700" letter-spacing="2" fill="#5ee9f7">PART F</text>
+
+  <text x="972" y="580" font-family="Arial" font-size="24"
+        font-weight="700" fill="#effaff">
+    Polynomial Regression
+  </text>
+
+  <text x="972" y="608" font-family="Arial" font-size="14"
+        fill="#9cb5c4">
+    Modeling Non-Linear Relationships
+  </text>
+
+  <!-- small graph -->
+  <g>
+    <rect x="1085" y="620" width="225" height="55" rx="8"
+          fill="#061321" stroke="#173f55" stroke-width="1.5"/>
+
+    <line x1="1098" y1="665" x2="1298" y2="665"
+          stroke="#31546a" stroke-width="1"/>
+    <line x1="1098" y1="628" x2="1098" y2="665"
+          stroke="#31546a" stroke-width="1"/>
+
+    <path d="M1102 658
+             C1125 646 1140 632 1160 634
+             C1182 637 1190 657 1210 660
+             C1232 664 1245 650 1260 637
+             C1275 625 1287 627 1295 630"
+          fill="none"
+          stroke="#34d399"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-dasharray="320"
+          stroke-dashoffset="320">
+      <animate attributeName="stroke-dashoffset"
+               values="320;0;320"
+               dur="4s"
+               repeatCount="indefinite"/>
+    </path>
+
+    <circle cx="1130" cy="645" r="2.8" fill="#5ee9f7"/>
+    <circle cx="1160" cy="636" r="2.8" fill="#5ee9f7"/>
+    <circle cx="1190" cy="654" r="2.8" fill="#5ee9f7"/>
+    <circle cx="1220" cy="657" r="2.8" fill="#5ee9f7"/>
+    <circle cx="1250" cy="642" r="2.8" fill="#5ee9f7"/>
+    <circle cx="1280" cy="629" r="2.8" fill="#5ee9f7"/>
+
+    <circle cx="1110" cy="654" r="3.5"
+            fill="#20d9ef" filter="url(#glow)">
+      <animate attributeName="cx"
+               values="1110;1290;1110"
+               dur="4s"
+               repeatCount="indefinite"/>
+      <animate attributeName="cy"
+               values="654;630;654"
+               dur="4s"
+               repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <text x="972" y="640" font-family="Arial" font-size="11"
+        fill="#55788d">
+    DEGREE 3
+  </text>
+
+  <text x="972" y="660" font-family="Arial" font-size="11"
+        fill="#55788d">
+    ŷ = b₀ + b₁x + b₂x² + b₃x³
+  </text>
+</g>
+
+<!-- PART G -->
+<g>
+  <rect x="65" y="735" width="390" height="110" rx="20"
+        fill="url(#panel)" stroke="#1c536e" stroke-width="2"/>
+
+  <text x="92" y="770" font-family="Arial" font-size="12"
+        font-weight="700" letter-spacing="2" fill="#5ee9f7">
+    PART G
+  </text>
+
+  <text x="92" y="800" font-family="Arial" font-size="21"
+        font-weight="700" fill="#effaff">
+    Gradient Descent Optimization
+  </text>
+
+  <text x="92" y="825" font-family="Arial" font-size="13"
+        fill="#8daaba">
+    θ = θ − α · ∇J(θ)  •  LOSS ↓
+  </text>
+</g>
+
+<!-- PART H -->
+<g>
+  <rect x="505" y="735" width="390" height="110" rx="20"
+        fill="url(#panel)" stroke="#1c536e" stroke-width="2"/>
+
+  <text x="532" y="770" font-family="Arial" font-size="12"
+        font-weight="700" letter-spacing="2" fill="#5ee9f7">
+    PART H
+  </text>
+
+  <text x="532" y="800" font-family="Arial" font-size="21"
+        font-weight="700" fill="#effaff">
+    Bias–Variance &amp; Diagnostics
+  </text>
+
+  <text x="532" y="825" font-family="Arial" font-size="13"
+        fill="#8daaba">
+    UNDERFIT → BEST FIT → OVERFIT
+  </text>
+</g>
+
+<!-- PART I -->
+<g>
+  <rect x="945" y="735" width="390" height="110" rx="20"
+        fill="#082526" stroke="#34d399" stroke-width="2"/>
+
+  <text x="972" y="770" font-family="Arial" font-size="12"
+        font-weight="700" letter-spacing="2" fill="#62e9c0">
+    PART I
+  </text>
+
+  <text x="972" y="800" font-family="Arial" font-size="21"
+        font-weight="700" fill="#effff9">
+    Final Analysis &amp; Reporting
+  </text>
+
+  <text x="972" y="825" font-family="Arial" font-size="13"
+        fill="#88b9ae">
+    RESULTS → INSIGHTS → DECISION
+  </text>
+</g>
+
+<text x="65" y="875"
+      font-family="Arial"
+      font-size="11"
+      letter-spacing="3"
+      fill="#52778b">
+  A → B → C → D → E → F → G → H → I
+</text>
+
+<text x="1335" y="875"
+      text-anchor="end"
+      font-family="Arial"
+      font-size="11"
+      letter-spacing="2"
+      fill="#52778b">
+  DATA → MODEL → OPTIMIZE → DIAGNOSE → REPORT
+</text>
+
+</svg>
