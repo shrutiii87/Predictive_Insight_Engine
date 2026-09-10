@@ -55,6 +55,14 @@ The dataset contains:
 
 ---
 
+## 🎬 Project Demo
+
+[![Watch Demo](https://img.shields.io/badge/Watch%20Demo-Add%20Your%20Link-blue?style=for-the-badge&logo=googledrive&logoColor=white)](#)
+
+📹 Add a link to your project walkthrough video here.
+
+---
+
 ### 🧬 Dataset Structure — House Price Dataset
 
 | Field Name | Data Type | Description | Notes |
