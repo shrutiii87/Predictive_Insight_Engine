@@ -1,7 +1,3 @@
-# 🏠 House Price Prediction — Supervised Learning
-
----
-
 ## 🎯 Objective
 
 The purpose of this project is to demonstrate **complete, practical knowledge of Supervised Learning regression techniques** — walking the full path from raw housing data to a compared, diagnosed and business-ready predictive model.
