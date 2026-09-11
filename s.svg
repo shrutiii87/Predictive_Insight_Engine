@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" style="background:#FFFFFF; font-family: Inter, Segoe UI, Arial, sans-serif;">
+<style>
+  .black { fill:#111111; }
+  .orange { fill:#FF6B00; }
+  .stroke-black { stroke:#111111; }
+  .stroke-orange { stroke:#FF6B00; }
+  .label { font-size:13px; font-weight:600; letter-spacing:0.5px; fill:#111; }
+  .small { font-size:11px; fill:#444; }
+  .title { font-size:22px; font-weight:800; fill:#111; letter-spacing:-0.5px; }
+  .card { fill:#FFFFFF; stroke:#111111; stroke-width:1.5; rx:16; }
+  .dot { rx:6; ry:6; }
+</style>
+
+<!-- Background grid -->
+<defs>
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#EEEEEE" stroke-width="0.8"/>
+  </pattern>
+  <marker id="arrowBlack" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#111"/>
+  </marker>
+  <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#FF6B00"/>
+  </marker>
+</defs>
+<rect width="900" height="520" fill="url(#grid)"/>
+
+<!-- Header -->
+<text x="30" y="42" class="title">SUPERVISED vs UNSUPERVISED LEARNING</text>
+<rect x="30" y="52" width="68" height="4" rx="2" fill="#FF6B00"/>
+<text x="30" y="74" class="small">WHITE THEME • ANIMATED EXPLANATION</text>
+
+<!-- Animated Object - Bouncing Orange Bot Eye -->
+<g id="animated-bot">
+  <rect x="760" y="16" width="104" height="44" rx="22" fill="#111111"/>
+  <circle cx="790" cy="38" r="8" fill="white">
+    <animate attributeName="r" values="8;5;8" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="834" cy="38" r="8" fill="white">
+    <animate attributeName="r" values="8;5;8" dur="2s" begin="0.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="790" cy="38" r="3" fill="#FF6B00">
+    <animateTransform attributeName="transform" type="translate" values="0 0; 2 1; -1 0; 0 0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="834" cy="38" r="3" fill="#FF6B00">
+    <animateTransform attributeName="transform" type="translate" values="0 0; 2 1; -1 0; 0 0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <animateTransform attributeName="transform" type="translate" values="0,0; 0,-3; 0,0" dur="1.6s" repeatCount="indefinite"/>
+</g>
+
+<!-- LEFT CARD: Supervised -->
+<g transform="translate(30,90)">
+  <rect width="400" height="400" class="card"/>
+  <text x="20" y="36" font-size="15" font-weight="800" fill="#111">SUPERVISED LEARNING</text>
+  <rect x="20" y="44" width="32" height="4" rx="2" fill="#FF6B00"/>
+  <text x="20" y="70" class="small">Data HAS Labels: (X , y) → Learns Mapping</text>
+
+  <!-- Input Data -->
+  <g transform="translate(20,90)">
+    <rect width="110" height="86" rx="10" fill="#FFF" stroke="#111" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <text x="10" y="18" class="label" font-size="10">INPUT DATA</text>
+    <g>
+      <rect x="10" y="28" width="36" height="14" rx="4" fill="#111"/>
+      <text x="16" y="38" font-size="8" fill="white" font-weight="700">X = 🐱</text>
+      <rect x="52" y="28" width="28" height="14" rx="4" fill="#FF6B00"/>
+      <text x="56" y="38" font-size="8" fill="white" font-weight="700">y=CAT</text>
+      <rect x="10" y="48" width="36" height="14" rx="4" fill="#111"/>
+      <text x="16" y="58" font-size="8" fill="white" font-weight="700">X = 🐶</text>
+      <rect x="52" y="48" width="28" height="14" rx="4" fill="#FF6B00"/>
+      <text x="56" y="58" font-size="8" fill="white" font-weight="700">y=DOG</text>
+    </g>
+  </g>
+
+  <!-- Arrow to Model -->
+  <path d="M 140 132 L 180 132" stroke="#111" stroke-width="1.5" marker-end="url(#arrowBlack)">
+    <animate attributeName="stroke-dasharray" values="0 40;40 0" dur="1.2s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Model -->
+  <g transform="translate(188,100)">
+    <rect width="86" height="86" rx="14" fill="#111111"/>
+    <text x="14" y="24" font-size="10" font-weight="800" fill="white">MODEL</text>
+    <text x="14" y="38" font-size="9" fill="#FF6B00" font-weight="700">f(X) → y</text>
+    <!-- animated brain pulse -->
+    <g transform="translate(18,48)">
+      <rect width="50" height="4" rx="2" fill="#333"/>
+      <rect width="50" height="4" rx="2" fill="#FF6B00">
+        <animate attributeName="width" values="0;50;0" dur="2s" repeatCount="indefinite"/>
+      </rect>
+      <rect y="10" width="50" height="4" rx="2" fill="#333"/>
+      <rect y="10" width="50" height="4" rx="2" fill="#FF6B00">
+        <animate attributeName="width" values="0;50;0" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- Arrow to Output -->
+  <path d="M 284 132 L 324 132" stroke="#FF6B00" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+
+  <!-- Output Prediction -->
+  <g transform="translate(332,90)">
+    <rect width="48" height="86" rx="10" fill="#FF6B00"/>
+    <text x="8" y="18" font-size="9" font-weight="800" fill="white">OUTPUT</text>
+    <text x="8" y="38" font-size="20">🐱</text>
+    <text x="8" y="56" font-size="9" font-weight="800" fill="white">→ CAT</text>
+    <text x="8" y="70" font-size="7" fill="white">98% ✓</text>
+  </g>
+
+  <!-- Loss Feedback Loop - Animated -->
+  <path id="feedback" d="M 230 200 C 230 240, 80 240, 80 190" fill="none" stroke="#111" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <g>
+    <circle r="5" fill="#FF6B00">
+      <animateMotion dur="3s" repeatCount="indefinite" rotate="auto">
+        <mpath href="#feedback"/>
+      </animateMotion>
+    </circle>
+  </g>
+  <text x="70" y="232" class="small" font-size="9">LOSS → CORRECT &amp; LEARN</text>
+
+  <!-- Example tasks -->
+  <g transform="translate(20,300)">
+    <rect width="360" height="80" rx="12" fill="#F7F7F7" stroke="#E5E5E5"/>
+    <text x="14" y="18" class="label" font-size="10">EXAMPLES:</text>
+    <text x="14" y="34" font-size="11" fill="#111">• Classification: Spam vs Not Spam</text>
+    <text x="14" y="50" font-size="11" fill="#111">• Regression: Price = f(size, location)</text>
+    <text x="14" y="66" font-size="10" fill="#FF6B00" font-weight="700">Goal: Predict correct label for NEW data</text>
+  </g>
+</g>
+
+<!-- RIGHT CARD: Unsupervised -->
+<g transform="translate(470,90)">
+  <rect width="400" height="400" class="card"/>
+  <text x="20" y="36" font-size="15" font-weight="800" fill="#111">UNSUPERVISED LEARNING</text>
+  <rect x="20" y="44" width="32" height="4" rx="2" fill="#111"/>
+  <text x="20" y="70" class="small">Data has NO Labels: (X only) → Finds Structure</text>
+
+  <!-- Raw Data Cloud -->
+  <g transform="translate(20,90)">
+    <rect width="110" height="86" rx="10" fill="#FFF" stroke="#111" stroke-width="1.2" stroke-dasharray="5 4"/>
+    <text x="10" y="18" class="label" font-size="10">RAW DATA</text>
+    <g id="rawdots">
+      <circle cx="20" cy="36" r="4" fill="#111"/><circle cx="35" cy="42" r="4" fill="#111"/><circle cx="28" cy="56" r="4" fill="#111"/>
+      <circle cx="70" cy="38" r="4" fill="#111"/><circle cx="80" cy="52" r="4" fill="#111"/><circle cx="65" cy="60" r="4" fill="#111"/>
+    </g>
+    <animateTransform attributeName="transform" type="translate" values="0 0; 0 -2; 0 0" dur="2s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <path d="M 140 132 L 180 132" stroke="#111" stroke-width="1.5" marker-end="url(#arrowBlack)"/>
+
+  <!-- Clustering Model -->
+  <g transform="translate(188,100)">
+    <rect width="86" height="86" rx="14" fill="#FFFFFF" stroke="#111" stroke-width="1.5"/>
+    <text x="10" y="24" font-size="10" font-weight="800" fill="#111">FIND</text>
+    <text x="10" y="36" font-size="10" font-weight="800" fill="#FF6B00">PATTERN</text>
+    <!-- animated clustering circles -->
+    <g>
+      <circle cx="25" cy="58" r="14" fill="none" stroke="#111" stroke-width="1" stroke-dasharray="3 3">
+        <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="60" cy="62" r="14" fill="none" stroke="#FF6B00" stroke-width="1.2" stroke-dasharray="3 3">
+        <animate attributeName="r" values="18;12;18" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <path d="M 284 132 L 324 132" stroke="#111" stroke-width="1.5" marker-end="url(#arrowBlack)"/>
+
+  <!-- Clustered Output -->
+  <g transform="translate(324,90)">
+    <rect width="56" height="86" rx="10" fill="#111"/>
+    <text x="8" y="18" font-size="8" font-weight="800" fill="white">CLUSTERS</text>
+    <!-- Cluster A orange -->
+    <circle cx="18" cy="36" r="4" fill="#FF6B00">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -3; 0 0" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="30" cy="42" r="4" fill="#FF6B00"/>
+    <circle cx="20" cy="52" r="4" fill="#FF6B00"/>
+    <!-- Cluster B white -->
+    <circle cx="38" cy="36" r="4" fill="white" stroke="#FF6B00"/>
+    <circle cx="44" cy="48" r="4" fill="white" stroke="#FF6B00">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -3; 0 0" dur="1s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="34" cy="60" r="4" fill="white" stroke="#FF6B00"/>
+  </g>
+
+  <!-- Visual Demo: moving points finding clusters -->
+  <g transform="translate(20,200)">
+    <rect width="360" height="86" rx="12" fill="#FFF" stroke="#111" stroke-width="1"/>
+    <text x="12" y="16" font-size="9" font-weight="700" fill="#111">LIVE CLUSTERING DEMO:</text>
+    <g>
+      <!-- center points -->
+      <circle cx="80" cy="50" r="5" fill="#111"><animate attributeName="cx" values="80;50;80" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="90" cy="60" r="5" fill="#111"><animate attributeName="cx" values="90;60;90" dur="3.2s" repeatCount="indefinite"/></circle>
+      <circle cx="260" cy="50" r="5" fill="#FF6B00"><animate attributeName="cx" values="260;290;260" dur="2.8s" repeatCount="indefinite"/></circle>
+      <circle cx="270" cy="60" r="5" fill="#FF6B00"><animate attributeName="cx" values="270;300;270" dur="3.1s" repeatCount="indefinite"/></circle>
+      <line x1="65" y1="50" x2="115" y2="50" stroke="#111" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.4"/>
+      <line x1="245" y1="50" x2="315" y2="50" stroke="#FF6B00" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.6"/>
+    </g>
+    <text x="50" y="80" font-size="8" fill="#111" font-weight="700">GROUP A</text>
+    <text x="250" y="80" font-size="8" fill="#FF6B00" font-weight="700">GROUP B</text>
+  </g>
+
+  <g transform="translate(20,300)">
+    <rect width="360" height="80" rx="12" fill="#111111"/>
+    <text x="14" y="18" font-size="10" font-weight="700" fill="white">EXAMPLES:</text>
+    <text x="14" y="34" font-size="11" fill="#CCCCCC">• Clustering: Customer segments</text>
+    <text x="14" y="50" font-size="11" fill="#CCCCCC">• Anomaly: Fraud detection</text>
+    <text x="14" y="66" font-size="10" fill="#FF6B00" font-weight="700">Goal: Discover hidden structure in data</text>
+  </g>
+</g>
+
+<!-- Bottom legend -->
+<g transform="translate(30,510)">
+  <circle cx="0" cy="0" r="5" fill="#111"/><text x="10" y="4" font-size="10" fill="#111">Data Point / Label</text>
+  <circle cx="130" cy="0" r="5" fill="#FF6B00"/><text x="140" y="4" font-size="10" fill="#111">Learned / Clustered</text>
+  <rect x="260" y="-4" width="14" height="8" rx="2" fill="none" stroke="#111" stroke-dasharray="3 2"/><text x="280" y="4" font-size="10" fill="#111">Unlabeled / Input</text>
+</g>
+</svg>
