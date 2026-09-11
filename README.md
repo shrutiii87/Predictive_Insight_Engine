@@ -4,9 +4,14 @@
 
 ## 🎯 Objective
 
-The purpose of this project is to demonstrate **complete, practical knowledge of Supervised Learning regression techniques** — walking the full path from raw housing data to a compared, diagnosed and business-ready predictive model.
 
-Every stage is deliberate: **understand → split → model (simple, multiple, polynomial) → evaluate → optimize with gradient descent → diagnose bias/variance → report.** Nothing is skipped, and every technique is followed by a 🎯 *Insight* note explaining what it revealed and whether it was the right call.
+<img width="1600" height="1000" alt="download" src="https://github.com/user-attachments/assets/eba98a6a-598a-47d8-9c39-e0c9da181c94" />
+
+
+
+
+
+
 
 ---
 
