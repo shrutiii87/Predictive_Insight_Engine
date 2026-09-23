@@ -1,0 +1,61 @@
+/* Main App */
+.stApp {
+    background-color: #f5f7fb;
+}
+
+/* Main Title */
+h1 {
+    color: #4c1d95;
+    font-weight: 700;
+}
+
+/* Section Headings */
+h2, h3 {
+    color: #312e81;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    border-right: 1px solid #e5e7eb;
+}
+
+/* Sidebar Heading */
+section[data-testid="stSidebar"] h2 {
+    color: #4c1d95;
+}
+
+/* Buttons */
+.stButton > button {
+    width: 100%;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.stButton > button:hover {
+    background-color: #5b21b6;
+    color: white;
+}
+
+/* Metric Cards */
+[data-testid="stMetric"] {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Input Boxes */
+.stNumberInput input {
+    border-radius: 8px;
+}
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+    border-radius: 10px;
+}
